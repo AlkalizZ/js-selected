@@ -12,20 +12,8 @@ var Check = {
         }
     },
     reversed: function(){
-        var selected = [],
-            unselected = [];
         for(var i = 0; i < checkBox.length; i++){
-            if(checkBox[i].checked){
-                selected.push(checkBox[i]);
-            }else{
-                unselected.push(checkBox[i]);
-            }
-        }
-        for(var i = 0; i < selected.length; i++){
-            selected[i].checked = false;
-        }
-        for(var i = 0; i < unselected.length; i++){
-            unselected[i].checked = "true";
+            checkBox[i].checked ? checkBox[i].checked = false : checkBox[i].checked = true;
         }
     }
 }
